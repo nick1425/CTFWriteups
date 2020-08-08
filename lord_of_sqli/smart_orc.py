@@ -12,7 +12,7 @@ if len(sys.argv) == 2:
     php_cookie = sys.argv[2]
 else:
     url = "https://los.rubiya.kr/chall/orc_60e5b360f95c1f9688e4f3a86c5dd494.php"
-    php_cookie = "4668b19caq36q449evot9t505i"
+    php_cookie = "it63gmjm0ml88kmrul17g64j8m"
 
 result = [' '] * 8
 
