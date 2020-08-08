@@ -1,0 +1,126 @@
+blue ~~~8>~ 0 1;
+yellow ~~~8>~ 0 2;
+green ~<8~~~ 0 0;
+if green == 0 then
+    blue ~~~8>~ 0 3;
+    yellow ~~~8>~ 0 4;
+    green := 1;
+    green ~~~8>~ 0 0;
+    return "";
+else
+    if green == 1 then
+        green ~<8~~~ 0 3;
+        red ~<8~~~ 0 4;
+        green := blue - green;
+        red := yellow - red;
+        green ~~~8>~ 0 5;
+        red ~~~8>~ 0 6;
+        green := 2;
+        green ~~~8>~ 0 0;
+        slide {moveToCourse};
+    else
+        if green == 2 then
+            slide {moveToCourse};
+        else
+            slide {moveOnCourse};
+        fi;
+    fi;
+    
+fi;
+{myReturn}
+if banana == "R" then
+    green ~<8~~~ 0 5;
+    yellow ~<8~~~ 0 6;
+    blue := (0 - yellow);
+    green ~~~8>~ 0 6;
+    blue ~~~8>~ 0 5;
+else 
+    if banana == "L" then
+        green ~<8~~~ 0 5;
+        yellow ~<8~~~ 0 6;
+        blue := (0 - green);
+        yellow ~~~8>~ 0 5;
+        blue ~~~8>~ 0 6;
+    fi;
+fi;
+return banana;
+{moveToCourse}
+green ~<8~~~ 0 5;
+red ~<8~~~ 0 6;
+blue ~<8~~~ 0 1;
+yellow ~<8~~~ 0 2;
+if blue == 2 then
+    if green == 1 then
+        banana := "";
+        slide {myReturn};
+    fi;
+if (green + 1) == 0 then
+    banana := "R";
+    slide {myReturn};
+fi;
+if red == 1 then
+    banana := "L";
+    slide {myReturn};
+fi;
+if (red + 1) == 0 then
+    banana := "R";
+    slide {myReturn};
+fi;
+else
+    if green == 1 then
+        banana := "R";
+        slide {myReturn};
+    else
+        green := 3;
+        green ~~~8>~ 0 0;
+        banana := "";
+        slide {myReturn};
+    fi;
+fi;
+{moveOnCourse}
+blue ~<8~~~ 0 1;
+yellow ~<8~~~ 0 2;
+green ~<8~~~ 0 0;
+red ~<8~~~ 0 6;
+if green == 3 then
+    if blue == 1 then
+        if yellow == 2 then
+            green := 5;
+            green ~~~8>~ 0 0;
+banana := "R";
+        slide {myReturn};
+        fi;
+fi;
+    if yellow < 4 then
+        if yellow == 2 then
+            green := 4;
+            green ~~~8>~ 0 0;
+fi;
+banana := "L";
+        slide {myReturn};
+fi;
+banana := "";
+slide {myReturn};
+fi;
+if green == 4 then
+    if yellow > 17 then
+        if yellow == 19 then
+            green := 3;
+            green ~~~8>~ 0 0;
+        fi;
+        banana := "R";
+        slide {myReturn};
+    fi;
+    banana := "";
+    slide {myReturn};
+fi;
+if green == 5 then
+    if blue == 28 then
+        green := 4;
+        green ~~~8>~ 0 0;
+        banana := "R";
+        slide {myReturn};
+    fi;   
+fi;
+slide {myReturn};
+.
