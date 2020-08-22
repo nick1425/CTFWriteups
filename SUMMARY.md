@@ -8,6 +8,5 @@
 
 ## Pwnable.kr
 
-* [fd](pwnable.kr/fd/README.md)
-  * [fd](pwnable.kr/fd/fd.md)
+* [fd](pwnable.kr/fd.md)
 
