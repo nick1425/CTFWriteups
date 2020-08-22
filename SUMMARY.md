@@ -1,4 +1,4 @@
 # Table of contents
 
-* [Shikata Ga Nai](README.md)
+* [CTF Writeups](README.md)
 
