@@ -1,6 +1,4 @@
----
-description: A journal of my adventures through the byte forest.
----
-
 # CTF Writeups
+
+A journal of our adventures through the byte forest.
 
