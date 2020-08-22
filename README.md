@@ -1,2 +1,2 @@
-# CTFWriteups
-Archive for these sweet sweet solutions 🥤
+# Initial page
+
