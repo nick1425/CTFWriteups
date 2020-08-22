@@ -1,6 +1,6 @@
 ---
-description: A journal of my adventures through the byte forest.
+description: A personal journal of my adventures through the byte forest.
 ---
 
-# CTF Writeups
+# Shikata Ga Nai
 
