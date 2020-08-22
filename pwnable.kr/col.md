@@ -1,4 +1,4 @@
-# README
+# col
 
 ## The Challenge
 
@@ -10,7 +10,5 @@ ssh col@pwnable.kr -p2222 \(pw:guest\)
 
 ## Solution
 
-![](../../.gitbook/assets/image%20%282%29.png)
-
-
+![](../.gitbook/assets/image%20%282%29.png)
 

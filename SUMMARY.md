@@ -8,8 +8,6 @@
 
 ## Pwnable.kr
 
-* [col](pwnable.kr/col/README.md)
-  * [README](pwnable.kr/col/readme.md)
-* [fd](pwnable.kr/fd/README.md)
-  * [Untitled](pwnable.kr/fd/untitled.md)
+* [col](pwnable.kr/col.md)
+* [fd](pwnable.kr/fd.md)
 
