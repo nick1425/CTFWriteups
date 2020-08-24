@@ -17,7 +17,7 @@ The program expects one argument with a length of 20.
 ![](../.gitbook/assets/image%20%283%29.png)
 
 * The 20 byte string input is converted to 5 integers \(4 byte int \* 5 = 20\).
-*  The sum of these numbers should equal to 0x21DD09EC.
+* The sum of these numbers should equal to 0x21DD09EC.
 
 ![](../.gitbook/assets/image%20%284%29.png)
 
