@@ -14,7 +14,7 @@ Running at: nc pwnable.kr 9000
 
 
 
-## Solution
+## The Solution
 
 
 

@@ -19,6 +19,7 @@ def handle_md_pair(file_path, dir_path):
 
 if len(sys.argv) != 2:
     print('usage: update_mds path')
+    sys.exit()
 path = sys.argv[1]
 if not os.path.isdir(path):
     print('ERROR, expected valid dir got \'{}\''.format(path))
