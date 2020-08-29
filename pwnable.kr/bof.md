@@ -16,6 +16,22 @@ We need to override the argument of the function **func** using the unsafe **get
 
 ### Finding the offset
 
+We're using **gdb**. Set a breakpoint at the beginning of the "func" function, and print the next 15 instructions to find **gets**.
+
+![](../.gitbook/assets/image%20%287%29.png)
+
+Here it is, at 0x5655564f. Set a breakpoint at the next instruction and continue execution.
+
+Enter easy to read input, like so
+
+![](../.gitbook/assets/image%20%288%29.png)
+
+Now examine 32 word-sized chunks of memory starting at ESP.
+
+![](../.gitbook/assets/image%20%286%29.png)
+
+Here is our 32-byte input, and after an offset of 52 lies 0xdeadbeef. So, **52** is our offset.
+
 ### Python3 one-liner
 
 It turns out that python3 print\(\) function encodes characters as a sequence of Unicode characters instead of a sequence of bytes \[[link](https://stackoverflow.com/questions/32017389/write-different-hex-values-in-python2-and-python3)\]. Instead of print\(\), sys.stdout.buffer.write was used for the buffer. To gain a semi-interactive shell we sent over the **cat** command without arguments. From 'cat' man page:
