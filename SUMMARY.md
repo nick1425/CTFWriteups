@@ -11,5 +11,6 @@
 * [fd](pwnable.kr/fd.md)
 * [col](pwnable.kr/col.md)
 * [bof](pwnable.kr/bof.md)
+* [flag](pwnable.kr/flag.md)
 * [passcode](pwnable.kr/passcode.md)
 

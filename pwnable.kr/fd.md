@@ -6,7 +6,7 @@ Mommy! what is a file descriptor in Linux?
 
 ssh fd@pwnable.kr -p2222 \(pw:guest\)
 
-## Solution
+## The Solution
 
 ![](../.gitbook/assets/image%20%281%29.png)
 

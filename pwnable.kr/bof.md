@@ -6,7 +6,7 @@ Nana told me that buffer overflow is one of the most common software vulnerabili
 
 Running at: nc pwnable.kr 9000
 
-## Solution
+## The Solution
 
 This is a basic buffer overflow challenge.
 
