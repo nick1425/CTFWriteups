@@ -13,4 +13,6 @@
 * [bof](pwnable.kr/bof.md)
 * [flag](pwnable.kr/flag.md)
 * [passcode](pwnable.kr/passcode.md)
+* [random](pwnable.kr/random.md)
+* [input](pwnable.kr/input.md)
 
