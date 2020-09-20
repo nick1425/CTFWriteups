@@ -19,4 +19,6 @@
 * [mistake](pwnable.kr/mistake.md)
 * [Shellshock](pwnable.kr/shellshock.md)
 * [coin1](pwnable.kr/coin1.md)
+* [blackjack](pwnable.kr/blackjack.md)
+* [coin2](pwnable.kr/coin2.md)
 
