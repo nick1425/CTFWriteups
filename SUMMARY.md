@@ -16,4 +16,5 @@
 * [random](pwnable.kr/random.md)
 * [input](pwnable.kr/input.md)
 * [leg](pwnable.kr/leg.md)
+* [mistake](pwnable.kr/mistake.md)
 
