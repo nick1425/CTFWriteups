@@ -21,5 +21,6 @@
 * [coin1](pwnable.kr/coin1.md)
 * [blackjack](pwnable.kr/blackjack.md)
 * [lotto](pwnable.kr/lotto.md)
+* [cmd1](pwnable.kr/cmd1.md)
 * [coin2](pwnable.kr/coin2.md)
 

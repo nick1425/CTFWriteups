@@ -20,7 +20,7 @@ Here is the betting function:
 
 The program is caring enough to not let us bet more than what we have, but what if we bet with a negative amount?
 
-Most of the games we will lose, and when we lose our bet is subtracted from our total amount: 
+Most of the games we will lose, and when we lose our bet is subtracted from our total amount:
 
 ![](../.gitbook/assets/image%20%2839%29.png)
 
