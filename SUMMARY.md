@@ -2,10 +2,6 @@
 
 * [CTF Writeups](README.md)
 
-## Lord of SQLI
-
-* [Lord of SQLI](lord-of-sqli/lord-of-sqli.md)
-
 ## Pwnable.kr
 
 * [01 - fd](pwnable.kr/01-fd.md)
@@ -24,4 +20,8 @@
 * [14 - cmd1](pwnable.kr/14-cmd1.md)
 * [15 - cmd2](pwnable.kr/15-cmd2.md)
 * [43 - coin2](pwnable.kr/43-coin2.md)
+
+## Lord of SQLI
+
+* [Lord of SQLI](lord-of-sqli/lord-of-sqli.md)
 
