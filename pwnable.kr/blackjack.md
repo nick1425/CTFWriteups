@@ -16,13 +16,13 @@ We need to own more than a million dollars. After some interaction with the game
 
 Here is the betting function:
 
-![](../.gitbook/assets/image%20%2839%29.png)
+![](../.gitbook/assets/image%20%2840%29.png)
 
 The program is caring enough to not let us bet more than what we have, but what if we bet with a negative amount?
 
-Most of the games we will lose, and when we lose our bet is subtracted from our total amout: 
+Most of the games we will lose, and when we lose our bet is subtracted from our total amount: 
 
-![](../.gitbook/assets/image%20%2838%29.png)
+![](../.gitbook/assets/image%20%2839%29.png)
 
-So, just bet with a negative amount greater than a million, and grap that flag.
+So, just bet with a negative amount greater than a million, and grab that flag.
 
