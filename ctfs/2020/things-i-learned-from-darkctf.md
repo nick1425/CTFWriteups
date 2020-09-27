@@ -1,34 +1,5 @@
 # Things I learned from DarkCTF
 
-## Web
-
-### Source
-
-You can present very large numbers in PHP in this short manner:
-
-```text
-echo 9e9; //9000000000
-```
-
-### Dusty Notes
-
-Fuzzing input fields might yield nice errors.
-
-### Chain Race
-
-#### Apache2 Interesting Default Files
-
-* /etc/apache2/apache2.conf
-* /etc/apache2/ports.conf
-
-#### Race Condition Vulns
-
-The idea is to force a program to handle tasks in an unintended order. Usually happens when several threads are operating on the same resources with a time gap between initialization and usage.
-
-### Safe House
-
-????
-
 ## Forensics
 
 ### Wolfie's Contact
@@ -121,6 +92,35 @@ Google lens and [Yandex](https://yandex.com/images/) are good tools for reverse 
 ## PWN
 
 ### Roprop
+
+????
+
+## Web
+
+### Source
+
+You can present very large numbers in PHP in this short manner:
+
+```text
+echo 9e9; //9000000000
+```
+
+### Dusty Notes
+
+Fuzzing input fields might yield nice errors.
+
+### Chain Race
+
+#### Apache2 Interesting Default Files
+
+* /etc/apache2/apache2.conf
+* /etc/apache2/ports.conf
+
+#### Race Condition Vulns
+
+The idea is to force a program to handle tasks in an unintended order. Usually happens when several threads are operating on the same resources with a time gap between initialization and usage.
+
+### Safe House
 
 ????
 
