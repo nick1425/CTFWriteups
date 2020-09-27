@@ -12,16 +12,18 @@ echo 9e9; //9000000000
 
 ### Dusty Notes
 
-????
+Fuzzing input fields might yield nice errors.
 
 ### Chain Race
 
-#### Apache2 Default Interesting Files
+#### Apache2 Interesting Default Files
 
 * /etc/apache2/apache2.conf
 * /etc/apache2/ports.conf
 
-????
+#### Race Condition Vulns
+
+The idea is to force a program to handle tasks in an unintended order. Usually happens when several threads are operating on the same resources with a time gap between initialization and usage.
 
 ### Safe House
 
@@ -40,7 +42,7 @@ mkdir mountpoint # mount ./rawimage/ewf1 ./mountpoint -o ro,loop,show_sys_files,
 
 ### AW
 
-????
+If the file is named _"spectre"_, they may be implying that I should inspect the spectrogram 🤦‍♂️
 
 ### Free Games
 
@@ -86,11 +88,11 @@ Base85 is a thing, and it looks something like this:
 \0Ec5e;DffZ(EZee.Bl.9pF"AGXBPCsi+DGm>@
 ```
 
-????
+Also, I liked this syntax of while loop to crack the vault:
 
-### Squids
-
-????
+```text
+nr=0; while true; do nr=$((nr+1)); if [[ $(./vault $nr) != *"wrong"* ]]; then ./vault $nr; echo $nr; fi; done;
+```
 
 ### Time Eater
 
@@ -99,10 +101,6 @@ Base85 is a thing, and it looks something like this:
 ## Misc
 
 ### QuickFix
-
-????
-
-### Secret Of The Contract
 
 ????
 
@@ -116,9 +114,9 @@ Base85 is a thing, and it looks something like this:
 
 ## OSINT
 
-### Eye
+### Eye & Time Travel
 
-????
+Google lens and [Yandex](https://yandex.com/images/) are good tools for reverse image search.
 
 ## PWN
 
