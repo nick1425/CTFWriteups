@@ -8,6 +8,7 @@ args[0] = './input'
 args[ord('A')] = "''"
 args[ord('B')] = "\"$(printf '\\x20\\x0a\\x0d')\""
 io.sendline('{} 2<&0'.format(' '.join(args)))
+print('{} 2<&0'.format(' '.join(args)))
 
 #stdio
 io.send('\x00\x0a\x02\xff')
