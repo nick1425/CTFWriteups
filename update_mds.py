@@ -40,7 +40,7 @@ for entry in entries:
     for entry2 in entries:
         if not entry2.is_dir:
             continue
-        if entry2.path.endswith(name):
+        if entry2.path.endswith('-'+name):
             md_dir_pairs.append((entry, entry2))
             break
 
