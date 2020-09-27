@@ -7,7 +7,7 @@
 * [2019](ctfs/2019/README.md)
   * [OverTheWire Advent](ctfs/2019/overthewire-advent.md)
 * [2020](ctfs/2020/README.md)
-  * [Midnight Sun](ctfs/2020/untitled.md)
+  * [Midnight Sun](ctfs/2020/midnight-sun.md)
   * [Things I learned from DarkCTF](ctfs/2020/things-i-learned-from-darkctf.md)
 
 ## Pwnable.kr
