@@ -91,9 +91,9 @@ Google lens and [Yandex](https://yandex.com/images/) are good tools for reverse 
 
 ## PWN
 
-### Roprop
+### roprop
 
-????
+Finally learned how to [ROP](https://codearcana.com/posts/2013/05/28/introduction-to-return-oriented-programming-rop.html#:~:text=What%20is%20ROP%3F,counter%20common%20exploit%20prevention%20strategies.&text=When%20using%20ROP%2C%20an%20attacker,other%20location%20in%20the%20program.)!
 
 ## Web
 
@@ -119,8 +119,4 @@ Fuzzing input fields might yield nice errors.
 #### Race Condition Vulns
 
 The idea is to force a program to handle tasks in an unintended order. Usually happens when several threads are operating on the same resources with a time gap between initialization and usage.
-
-### Safe House
-
-????
 
