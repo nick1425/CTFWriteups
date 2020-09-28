@@ -50,5 +50,5 @@ We created a ROP chain that jumps from `A` to `G` one after the other. It contai
 
 Now we can obtain `a` to `g` and calculate their sum \[with modulus in case the sum surpasses MAX or MIN int\].
 
-To get a better understanding check out our script.
+To get a better understanding check out our [script](https://github.com/nickbhe/CTFWriteups/blob/master/pwnable.kr/21-horcruxes/horcruxes.py).
 
