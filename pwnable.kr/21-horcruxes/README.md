@@ -12,13 +12,13 @@ ssh horcruxes@pwnable.kr -p2222 \(pw:guest\)
 
 Lets Examine the program first.
 
-![](../.gitbook/assets/image%20%2847%29.png)
+![](../../.gitbook/assets/image%20%2847%29.png)
 
 It asks us to select a number from the menu and then how much XP did we earn. Not very informative. We copied the binary to our machine and disassembled it. This is main:
 
  
 
-![](../.gitbook/assets/image%20%2848%29.png)
+![](../../.gitbook/assets/image%20%2848%29.png)
 
 1. An alarm is set to throw us out after 60 seconds
 2. The message about Voldemort is printed
@@ -28,17 +28,17 @@ It asks us to select a number from the menu and then how much XP did we earn. No
 
 Let's take a look at `init_ABCDEFG`:
 
-![](../.gitbook/assets/image%20%2845%29.png)
+![](../../.gitbook/assets/image%20%2845%29.png)
 
 Seven integers named 'a' to 'g' are set to a random int. Their sum is saved in 'sum'. These variables have a global scope. Let's take a look at `ropme`:
 
-![](../.gitbook/assets/image%20%2846%29.png)
+![](../../.gitbook/assets/image%20%2846%29.png)
 
 The functions 'A' - 'G' print the values of the variables mentioned above. The EXP input uses `gets` which is great news, this is where we're going to ROP.
 
 But wait, can't we just redirect the function to print the flag?
 
-![](../.gitbook/assets/image%20%2849%29.png)
+![](../../.gitbook/assets/image%20%2849%29.png)
 
 All of the addresses in `ropme` contain `0a`. Once `puts` receives  `\n` it halts, which means we can't jump to any position within `ropme`.
 
