@@ -17,21 +17,21 @@ If the file is named _"spectre"_, they may be implying that I should inspect the
 
 ### Free Games
 
-????
+The writeup I read used [autopsy](https://www.autopsy.com/) to search the file system for. I tried to figure out why `grep` didn't work for me and I realized the link I was looking for is split into two lines. To prevent this I could use a tool or look for _"PencakSilat"_ instead of _"http"_. 
 
 ### Crcket
 
-????
+This challenge was about fixing a png. It required knowledge of the [PNG structure](http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html), and could use the help of [png-parser](https://github.com/Hedroed/png-parser).
 
 ## Cryptography
 
 ### Pipe Rhyme
 
-????
+First RSA challenge.
 
-### Duplicacy Within
-
-????
+* [FactorDB](http://factordb.com/) - a factorization Database.
+* [angr](https://github.com/angr/angr).
+* [z3](https://github.com/Z3Prover/z3).
 
 ## Linux
 
@@ -67,7 +67,7 @@ nr=0; while true; do nr=$((nr+1)); if [[ $(./vault $nr) != *"wrong"* ]]; then ./
 
 ### Time Eater
 
-????
+Sometimes you just have to keep enumerating... 😒
 
 ## Misc
 
@@ -75,13 +75,17 @@ nr=0; while true; do nr=$((nr+1)); if [[ $(./vault $nr) != *"wrong"* ]]; then ./
 
 ????
 
-### Minetest 3
-
-????
-
 ### P\_g\_G\_i\_P\_t
 
-????
+#### What can I do with PGP Fingerprint?
+
+Grap the PGP key with:
+
+```text
+gpg --recv-key <PGP Fingerprint>
+```
+
+In this challenge, the key doesn't contain user ID so this won't work. Another way to obtain a key from a fingerprint is by using an online lookup like [this one](http://keys.gnupg.net/).
 
 ## OSINT
 
