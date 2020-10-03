@@ -22,7 +22,7 @@ When we run the program with random valid input it crashes here:
 
 [This](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#expand=4056,5203,4056,5203,5669&text=_mm_stream) guide by intel implies that the address must be aligned by a 16-byte boundary when using `movntps`.  So be it.
 
-`malloc` uses 8 bytes before the returned address for a header, so if we send a size that is smaller by 8 from a 16-byte alignment the address returned to us will be aligned.
+`malloc` uses 8 bytes before the returned address for a header \[[source](https://sourceware.org/glibc/wiki/MallocInternals)\], so if we send a size that is smaller by 8 from a 16-byte alignment the address returned to us will be aligned.
 
 ```text
 printf '8\n24\n56\n120\n248\n504\n1016\n2040\n4088\n8184') | nc 0 9022
