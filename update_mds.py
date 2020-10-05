@@ -3,7 +3,7 @@ import sys
 import os
 import itertools
 
-LOG = True
+LOG = False
 
 
 def match(dir_entry: os.DirEntry, file_entry: os.DirEntry):
@@ -49,4 +49,4 @@ for file_entry, dir_entry in itertools.product(entries, entries):
 for (file_ent, dir_ent) in md_dir_pairs:
     if LOG:
         print('match', file_ent.name, dir_ent.name)
-    handle_md_pair(file_ent.path, dir_ent.path)
+    #handle_md_pair(file_ent.path, dir_ent.path)
