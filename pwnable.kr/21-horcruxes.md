@@ -16,14 +16,12 @@ Lets Examine the program first.
 
 It asks us to select a number from the menu and then how much XP did we earn. Not very informative. We copied the binary to our machine and disassembled it. This is main:
 
- 
-
 ![](../.gitbook/assets/image%20%2848%29.png)
 
 1. An alarm is set to throw us out after 60 seconds
 2. The message about Voldemort is printed
 3. `init_ABCDEFG` is called
-4. Some security rules are set \[probably to prevent us from corrupting the machine once we  achieve code execution\]
+4. Some security rules are set \[probably to prevent us from corrupting the machine once we achieve code execution\]
 5. `ropme` is called
 
 Let's take a look at `init_ABCDEFG`:

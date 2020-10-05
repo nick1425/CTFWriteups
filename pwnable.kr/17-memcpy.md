@@ -25,6 +25,6 @@ When we run the program with random valid input it crashes here:
 `malloc` uses 8 bytes before the returned address for a header \[[source](https://sourceware.org/glibc/wiki/MallocInternals)\], so if we send a size that is smaller by 8 from a 16-byte alignment the address returned to us will be aligned.
 
 ```text
-printf '8\n24\n56\n120\n248\n504\n1016\n2040\n4088\n8184') | nc 0 9022
+printf '8\n24\n56\n120\n248\n504\n1016\n2040\n4088\n8184' | nc 0 9022
 ```
 
