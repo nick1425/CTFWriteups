@@ -1,5 +1,17 @@
+#!/usr/bin/python3
 import sys
 import os
+import itertools
+
+LOG = True
+
+
+def match(dir_entry: os.DirEntry, file_entry: os.DirEntry):
+    if not dir_entry.is_dir() or not file_entry.is_file():
+        return False
+    _, dir_name = os.path.split(dir_entry.name)
+    _, file_name = os.path.split(file_entry.name)
+    return dir_name + '.md' == file_name
 
 
 def handle_md_pair(file_path, dir_path):
@@ -30,19 +42,11 @@ for entry in os.scandir(path):
 
 md_dir_pairs = []
 
-for entry in entries:
-    if not entry.is_file():
-        continue
-    path, name = os.path.split(entry.path)
-    name, ext = os.path.splitext(name)
-    if ext.lower() != '.md':
-        continue
-    for entry2 in entries:
-        if not entry2.is_dir:
-            continue
-        if entry2.path.endswith('-'+name):
-            md_dir_pairs.append((entry, entry2))
-            break
+for file_entry, dir_entry in itertools.product(entries, entries):
+    if match(dir_entry, file_entry):
+        md_dir_pairs.append((file_entry, dir_entry))
 
 for (file_ent, dir_ent) in md_dir_pairs:
+    if LOG:
+        print('match', file_ent.name, dir_ent.name)
     handle_md_pair(file_ent.path, dir_ent.path)
