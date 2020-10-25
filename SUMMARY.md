@@ -32,6 +32,7 @@
 * [18 - asm](pwnable.kr/18-asm.md)
 * [20 - blukat](pwnable.kr/20-blukat.md)
 * [21 - horcruxes](pwnable.kr/21-horcruxes.md)
+* [33 - echo1](pwnable.kr/33-echo1.md)
 * [43 - coin2](pwnable.kr/43-coin2.md)
 
 ## More Pwn
