@@ -13,7 +13,7 @@ Running at : nc pwnable.kr 9010
 By running the binary we learned that:
 
 * We can input a name
-* Three options are given to us
+* Three options are given to us:
   * only the first option is implemented, and it's named bof \[lol\]
 * We can exit the program and then decline. This behavior is more relevant to echo2, but if we exit after declining we get a nice print of the memory mapping. It teaches us that **ASLR is turned on**.
 
